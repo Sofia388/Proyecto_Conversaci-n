@@ -11,16 +11,16 @@
         public function BuscarUser($numUs, $pass)
         {
             $this->con=new Conexion();
-            $sql="SELECT * FROM `trabajador` WHERE `Depto_idDepto` = '$numUs' AND `Contraseña`='$pass';";
+            $sql="SELECT * FROM `trabajador` WHERE `Depto_idDepto` = '$numUs' AND `Contrasena`='$pass';";
             $consulta=$this->con->query($sql);
             $this->con->close();
             return $consulta;
         }
 
-        public function GuardarUser($correo,$nombre,$apellido,$contraseña,$Depto_idDepto,)
+        public function GuardarUser($correo,$nombre,$apellido,$contraseï¿½a,$Depto_idDepto,)
             {
                 $this->con=new Conexion();
-                $sql="INSERT INTO `trabajador`(`idUsuario`, `Depto_idDepto`, `Estado_idEstado`, `Roles_idRoles`, `Nombre`, `Apellido`,`Correo`) VALUES ('$correo','$nombre','$apellido','$contraseña','$dDepto_idDepto');"; 
+                $sql="INSERT INTO `trabajador`(`idUsuario`, `Depto_idDepto`, `Estado_idEstado`, `Roles_idRoles`, `Nombre`, `Apellido`,`Correo`) VALUES ('$correo','$nombre','$apellido','$contraseï¿½a','$dDepto_idDepto');"; 
                 $consulta=$this->con->query($sql);
                 $this->con->close();
                 return $consulta;
