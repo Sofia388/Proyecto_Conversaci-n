@@ -2,7 +2,7 @@
 
 
 
-    require_once ('AutoLoad.php');
+    require_once ('Autoload.php');
 
     if(isset($_GET['controller']) && isset($_GET['method']))
     {
