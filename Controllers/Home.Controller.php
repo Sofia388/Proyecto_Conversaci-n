@@ -1,7 +1,7 @@
 <?php
-// las pestanas superiores
+// las pestañas superiores
 
-    include ("./Framework/Smarty/libs/Smarty.class.php");    
+   
     class Home
     {
         public $smarty;
