@@ -80,7 +80,7 @@
       $dep=$_POST['Depto_idDepto'];
         
 
-      $user=$this->user->GuardarUser($correo,$nombre,$apellido,$contrasena,$Depto_idDepto);
+      $user=$this->user->GuardarUser($correo,$nombre,$apellido,$contrasena,$depto_idDepto);
 
       $this->smarty->assign('title','Login');
       $this->smarty->display('Login.tpl');
