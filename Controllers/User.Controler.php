@@ -76,8 +76,8 @@
       $correonew=$_POST['email'];
       $nombre=$_POST['nombre'];
       $apellido=$_POST['apellido'];
-      $contraseña=$_POST['Contrasena'];
-      $dep=$_POST['Depto_idDepto'];
+      $contraseña=$_POST['contrasena'];
+      $dep=$_POST['depto_idDepto'];
         
 
       $user=$this->user->GuardarUser($correo,$nombre,$apellido,$contrasena,$depto_idDepto);
