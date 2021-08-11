@@ -76,11 +76,11 @@
       $correonew=$_POST['email'];
       $nombre=$_POST['nombre'];
       $apellido=$_POST['apellido'];
-      $contraseña=$_POST['Contrasena'];
+      $contraseÃ±a=$_POST['Contrasena'];
       $dep=$_POST['Depto_idDepto'];
         
 
-      $user=$this->user->GuardarUser($correonew,$nombre,$apellido,$contraseña,$dep,$telefono,0,0,0,0,0,0,0);
+      $user=$this->user->GuardarUser($correo,$nombre,$apellido,$contrasena,$Depto_idDepto);
 
       $this->smarty->assign('title','Login');
       $this->smarty->display('Login.tpl');
