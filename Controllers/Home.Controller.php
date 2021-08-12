@@ -1,5 +1,5 @@
 <?php
-// las pestañas superiores
+// las pestanas superiores
 
    
     class Home
