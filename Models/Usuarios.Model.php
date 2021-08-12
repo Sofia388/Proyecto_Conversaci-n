@@ -17,7 +17,7 @@
             return $consulta;
         }
 
-        public function GuardarUser($correo,$nombre,$apellido,$contrasena,$Depto_idDepto,)
+        public function GuardarUser($correo,$nombre,$apellido,$contrasena,$depto_idDepto,)
             {
                 $this->con=new Conexion();
                 $sql="INSERT INTO `trabajador`(`idUsuario`, `Depto_idDepto`, `Estado_idEstado`, `Roles_idRoles`, `Nombre`, `Apellido`,`Correo`) VALUES ('$correo','$nombre','$apellido','$contrasena','$dDepto_idDepto');"; 
