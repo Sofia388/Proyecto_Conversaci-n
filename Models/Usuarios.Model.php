@@ -29,7 +29,7 @@
         public function BuscarTipoUser()
         {
             $this->con=new Conexion();
-            $sql= "SELECT * FROM 'blogtipousuario' WHERE 1 ;";
+            $sql= "SELECT * FROM 'Sistema_Chat' WHERE 1 ;";
             $consulta=$this->con->query($sql);
             $this->con->close();
             return $consulta;
