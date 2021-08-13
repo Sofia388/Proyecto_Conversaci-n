@@ -47,8 +47,39 @@
       $this->smarty->display('Cabeceras/Inicio.tpl');
     }
 
-
     public function BuscarUsuario()
+    {
+      $email=$_POST['Depto_idDepto'];
+      $pass=$_POST['Contrasena'];
+
+      $us=$this->user->BuscarUser($email,$pass);
+
+            if($us->num_rows==1)
+            {
+              session_start();
+              $usuario=mysqli_fetch_assoc($us);
+
+              $_SESSION['DPI']=$usuario['Codigo_u'];
+              $_SESSION['Depto_idDepto']=$usuario['Contrasena'];
+      
+             if($usuario['idUsuario']==1)
+                {
+                  $this->smarty->assign('title','Login');
+                  $this->smarty->display('Administrador.tpl');
+                }
+            }
+            else if ($us->num_rows>1)
+                {
+                  echo "mas de un usuario";
+                }
+            else 
+              {
+                $this->smarty->assign('title','Login');
+                $this->smarty->display('Login.tpl');
+                echo "Usuario o contraseña son incorrectos";
+              }
+    }
+    /*public function BuscarUsuario()
     {
       $numUs=$_POST['Depto_idDepto'];
       $pass=$_POST['Contrasena'];
@@ -68,7 +99,7 @@
                   $this->smarty->assign('title','Login');
                   $this->smarty->display('Login.tpl');
                 }
-            }
+            }*/
            
 
     public function GuardarUsuario()
