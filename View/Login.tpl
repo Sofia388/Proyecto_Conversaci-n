@@ -4,8 +4,8 @@
     <div class="nav-wrapper">
       <a href="#" class="brand-logo"> Inicio</a>
       <ul id="nav-mobile" class="right hide-on-med-and-down">
-        <li><a href="?controller=User&method=Regreso">Regresar</a></li>
-        <li><a href="?controller=User&method=IrRegistro">Registro</a></li>
+        <li><a href="?controllers=User&method=Regreso">Regresar</a></li>
+        <li><a href="?controllers=User&method=IrRegistro">Registro</a></li>
       </ul>
     </div>
   </nav>
@@ -15,7 +15,7 @@
     <h1 align="center">Login</h1>
 </div>
     <div class="row">
-    <form  method="post" action="?controller=User&method=BuscarUsuario" class="col s12">
+    <form  method="post" action="?controllers=User&method=BuscarUsuario" class="col s12">
 
     <div class="row" >
         <div class="input-field col s6 s2 row offset-s2 center aling" >

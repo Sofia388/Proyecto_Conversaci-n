@@ -20,7 +20,7 @@
     public function IrLogin()
     {
       $this->smarty->assign('title','Login');
-      $this->smarty->display('Login.tpl');
+      $this->smarty->display('/Login.tpl');
     }
 
     public function IrRegistro()
@@ -52,14 +52,14 @@
       $email=$_POST['Depto_idDepto'];
       $pass=$_POST['Contrasena'];
 
-      $us=$this->user->BuscarUser($email,$pass);
+      $us=$this->u->BuscarUser($email,$pass);
 
-            if($us->num_rows==1)
+            if($user->num_rows==1)
             {
               session_start();
-              $usuario=mysqli_fetch_assoc($us);
+              $usuario=mysqli_fetch_assoc($user);
 
-              //$_SESSION['DPI']=$usuario['Codigo_u'];
+            
               $_SESSION['Depto_idDepto']=$usuario['Contrasena'];
       
              if($usuario['idUsuario']==1)
@@ -68,7 +68,7 @@
                   $this->smarty->display('Administrador.tpl');
                 }
             }
-            else if ($us->num_rows>1)
+            else if ($user->num_rows>1)
                 {
                   echo "mas de un usuario";
                 }
@@ -90,7 +90,7 @@
       $dep=$_POST['depto_idDepto'];
         
 
-      $user=$this->user->GuardarUser($correo,$nombre,$apellido,$contrasena,$depto_idDepto);
+      $u=$this->user->GuardarUser($correo,$nombre,$apellido,$contrasena,$depto_idDepto);
 
       $this->smarty->assign('title','Login');
       $this->smarty->display('Login.tpl');

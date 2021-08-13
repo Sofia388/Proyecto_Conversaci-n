@@ -1,6 +1,8 @@
 <?php
          function Autoload($class)
          {
+    
+
              if(is_file('Controllers/'.$class.'.Controller.php'))
              {
                require_once('Controllers/'.$class.'.Controller.php');

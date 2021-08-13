@@ -6,19 +6,19 @@
 
     if(isset($_GET['controllers']) && isset($_GET['method']))
     {
-        $controller=$_GET['controllers'];
+        $controllers=$_GET['controllers'];
         $method=$_GET['method'];
     }
     else
     {
-       $controller="Home";
+       $controllers="Home";
        $method="Inicio";
     }
 
-    if(class_exists($controller) && method_exists($controller,$method))
+    if(class_exists($controllers) && method_exists($controllers,$method))
     {
 
-        $class=new $controller;
+        $class=new $controllers;
         $class->$method();
 
     }
