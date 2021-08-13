@@ -18,7 +18,7 @@
     if(class_exists($controller) && method_exists($controller,$method))
     {
 
-        $class=new $controllers;
+        $class=new $controller;
         $class->$method();
 
     }
