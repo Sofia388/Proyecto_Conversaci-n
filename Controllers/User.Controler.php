@@ -79,29 +79,8 @@
                 echo "Usuario o contraseña son incorrectos";
               }
     }
-    /*public function BuscarUsuario()
-    {
-      $numUs=$_POST['Depto_idDepto'];
-      $pass=$_POST['Contrasena'];
-
-      $us=$this->user->BuscarUser($numUs,$pass);
-
-            if($us->num_rows==1)
-            {
-              ession_start();
-              $usuario=mysqli_fetch_assoc($us);
-
-              ///$_SESSION['DPI']=$numUs[`Codigo_u`];
-              $_SESSION['Depto_idDepto']=$usuario['Contrasena'];
-      
-             if($usuario['Contrasena']==1)
-                {
-                  $this->smarty->assign('title','Login');
-                  $this->smarty->display('Login.tpl');
-                }
-            }*/
-           
-
+    
+          
     public function GuardarUsuario()
     {
       $correonew=$_POST['email'];
