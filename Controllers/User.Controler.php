@@ -59,7 +59,7 @@
               session_start();
               $usuario=mysqli_fetch_assoc($us);
 
-              $_SESSION['DPI']=$usuario['Codigo_u'];
+              //$_SESSION['DPI']=$usuario['Codigo_u'];
               $_SESSION['Depto_idDepto']=$usuario['Contrasena'];
       
              if($usuario['idUsuario']==1)
