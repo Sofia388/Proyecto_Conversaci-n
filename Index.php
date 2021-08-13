@@ -15,7 +15,7 @@
        $method="Inicio";
     }
 
-    if(class_exists($controllers) && method_exists($controllers,$method))
+    if(class_exists($controller) && method_exists($controller,$method))
     {
 
         $class=new $controllers;
