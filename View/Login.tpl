@@ -27,7 +27,7 @@
       <div class="row" class="center-align">
          <div class="input-field col s6 row offset-s2 center aling">
              <input id="Contrasena" type="Contrasena" class="validate" name="Contrasena" required=""/>
-             <label for="Contrasena">Contraseña</label>
+             <label for="Contrasena">Contrasena</label>
             </div>
       </div>
 
