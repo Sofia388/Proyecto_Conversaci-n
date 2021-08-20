@@ -1,11 +1,12 @@
+
 {include file="Cabeceras/Header.tpl"}  
 
   <nav>
     <div class="nav-wrapper">
       <a href="#" class="brand-logo"> Registro</a>
       <ul id="nav-mobile" class="right hide-on-med-and-down">
-        <li><a href="?controllers=User&method=Regreso">Regresar</a></li>
-        <li><a href="?controllers=User&method=IrLogin">Login</a></li>
+        <li><a href="?controller=User&method=Regreso">Regresar</a></li>
+        <li><a href="?controller=User&method=IrLogin">Login</a></li>
       </ul>
     </div>
   </nav>
@@ -15,12 +16,12 @@
    </div>
       
       <div class="row">
-    <form  method="post" action="?controllers=User&method=GuardarUsuario" class="col s12">
+    <form  method="post" action="?controller=User&method=GuardarUsuario" class="col s12">
 
       <div class="row">
         <div class="input-field col s6 s2 row offset-s2 center aling">
-          <input id="correo" type="email" class="validate" name="correo" required="">
-          <label for="correo">Email</label>
+          <input id="email" type="email" class="validate" name="email" required="">
+          <label for="email">Email</label>
         </div>
       </div>
       
@@ -45,12 +46,18 @@
 
       <div class="row">
         <div class="input-field col s6 s2 row offset-s2 center aling">
-          <input id="dDepto_idDepto" type="text" class="validate" name="dDepto_idDepto" required="">
-          <label for="dDepto_idDepto">ID Departamento</label>
+          <input id="depto" type="text" class="validate" name="depto" required="">
+          <label for="depto">Departamento</label>
           <span class="helper-text" data-error="wrong" data-success="right">Coloca 1- Sala de Ventas o 2- Administracion</span>
         </div>
       </div>
 
+      <div class="row">
+        <div class="input-field col s6 s2 row offset-s2 center aling">
+          <input id="cel" type="text" class="validate" name="cel" required="">
+          <label for="cel">Telefono</label>
+        </div>
+      </div>
 
 
             <div class="row" class="center-align">

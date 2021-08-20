@@ -11,7 +11,7 @@
 
         <title>{$title}</title>
     </header>
-    
-          
-    <body bgcolor="#b2dfdb">
+
+    <body bgcolor="E0DDDE">
     <div class="row" class="valing-wrapper">
+
